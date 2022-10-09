@@ -1,0 +1,50 @@
+<header>
+  <div class="container">
+    <div class="header-item d-flex justify-content-between">
+      <div class="icon-menu d-flex align-items-center">
+        <div class="header-logo">
+          <a href="">
+            <img src="../../../assets/images/free-fire.png" width="50" alt="duc-shop">
+          </a>
+        </div>
+      </div>
+
+      <div class="menu navbar-nav">
+        <ul class="nav mr-auto">
+          <li class="nav-item active">
+            <a href="">Trang chủ</a>
+          </li>
+          <li class="nav-item has_sub_menu">
+            <a [routerLink]="['/products']">Sản phẩm
+              <ul class="sub_menu">
+                <li>Quần</li>
+                <li>Áo</li>
+              </ul>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="">Liên hệ</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/abouts']">AboutUs</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="header-action d-flex justify-content-around">
+        <div class="search-box" [ngClass]="{'open': onToggle}">
+          <input type="text" class="search-input" placeholder="Nhập sản phẩm tìm kiếm">
+          <button class="search-btn">
+            <i class="fa fa-search" (click)="search()" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="shopping-cart position-relative">
+          <span class="fs-4"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+          <span class="cart-count bg-white px-1 rounded-2 position-absolute border">{{numberItem}}</span>
+      </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+

@@ -1,0 +1,146 @@
+<section class="card">
+  <div class="container">
+    <div class="pants">
+      <h2>Sản Phẩm | Products</h2>
+      <div class="product-list-pants row">
+        <div class="col-3" *ngFor="let item of listProducts">
+          <div class="card-item">
+            <div class="card-image position-relative">
+              <a href="./detail.html?id=21">
+                <img src="{{ item.image }}" alt="{{item.category}}"
+              /></a>
+              <ul class="social position-absolute top-0 end-0">
+                <li></li>
+                <li>
+                  <button
+                    class="button-discount"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal21"
+                    role="button"
+                  >
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                  </button>
+                </li>
+              </ul>
+
+              <span class="flash-tag position-absolute">New Arrival</span>
+            </div>
+            <div class="card-title">
+              <h3>{{item.title}}</h3>
+              <p>{{item.price}}&nbsp;$</p>
+            </div>
+            <button class="btn btn--detail">
+              <a href="./detail.html?id=21">Chi tiết</a>
+            </button>
+          </div>
+          <div
+            class="modal fade render-modal"
+            id="exampleModal21"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Chi tiết sản phẩm
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="product-detail">
+                    <div class="product-modal d-flex border mb-4">
+                      <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="image">
+                          <img
+                            src="https://bizweb.dktcdn.net/thumb/1024x1024/100/414/728/products/den.png?v=1651135749157"
+                            alt="CARGO SHORT PANTS"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-8 col-md-8 col-sm-9">
+                        <div id="detail ">
+                          <p class="product-name fw-bold mx-1">
+                            CARGO SHORT PANTS
+                          </p>
+                          <p
+                            class="product-price text-danger fw-bold mb-2 mx-1"
+                          >
+                            649.000&nbsp;VND
+                          </p>
+                          <div class="size d-flex mx-1 mb-2">
+                            <span class="fw-bold me-3">Kích cỡ:</span>
+                            <div class="product-size mb-2">
+                              <span
+                                class="border py-1 px-2 border-dark me-2 select-size"
+                                >M</span
+                              >
+                              <span
+                                class="border py-1 px-2 border-dark me-2 select-size"
+                                >S</span
+                              >
+                              <span
+                                class="border py-1 px-2 border-dark me-2 select-size"
+                                >L</span
+                              >
+                              <span
+                                class="border py-1 px-2 border-dark me-2 select-size"
+                                >XL</span
+                              >
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center mb-2 flex-wrap">
+                            <span class="fw-bold me-3 mx-1">Số lượng:</span>
+                            <span class="count-product d-inline-block me-3">
+                              <span
+                                onclick="exparam12(21)"
+                                class="rounded-circle px-2 d-inline-block fw-bold btn-minus-count"
+                                >-</span
+                              >
+                              <span id="c21" class=" ">
+                                <span
+                                  class="count py-1 px-2 d-inline-block fw-bold"
+                                  >1</span
+                                >
+                              </span>
+                              <span
+                                onclick="addparam12(21)"
+                                class="rounded-circle px-2 d-inline-block fw-bold btn-plus-count"
+                                >+</span
+                              >
+                            </span>
+                            <button
+                              onclick="addCartPants(21)"
+                              class="btn-icon btn-add-to-cart"
+                            >
+                              Thêm vào giỏ hàng
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="button-more d-flex justify-content-center">
+            <button class="more-btn btn2">
+              <a href="./product.html#Pants">xem thêm sản phẩm</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
