@@ -4,9 +4,17 @@
   padding: 0;
 }
 
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
 a {
   text-decoration: none;
   color: #000;
+}
+
+ul li.active, ul li:hover {
+  border-bottom: 2px solid black;
 }
 
 .container {

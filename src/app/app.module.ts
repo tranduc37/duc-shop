@@ -9,6 +9,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AboutsComponent } from './components/abouts/abouts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './components/products/products.component';
+import { HomeComponent } from './components/home/home.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { ProductsComponent } from './components/products/products.component';
     FooterComponent,
     NotFoundComponent,
     AboutsComponent,
-    ProductsComponent
+    ProductsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    StoreModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]
